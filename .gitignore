@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# IDE
+.idea/
+
+# OS
+.DS_Store
+
+# Downloaded assets (not needed for deploy)
+drive-download-20260121T234110Z-3-001/
+drive-download-20260121T234110Z-3-001.zip
