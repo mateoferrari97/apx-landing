@@ -34,7 +34,7 @@ export default function Hero() {
           <span style={{ fontWeight: 400 }}> de su nombre.</span>
         </p>
         <a
-          href="https://wa.me/5491150975248?text=Hola!%20Me%20interesa%20sobre%20saber%20sus%20productos"
+          href="https://wa.me/5491150975248?text=Hola!%20Me%20interesa%20saber%20sobre%20sus%20productos"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block font-helvetica-bold-cond bg-mariana-light text-mariana-dark text-xl md:text-2xl px-10 py-3 rounded-lg hover:bg-white transition-colors uppercase tracking-wide"

@@ -18,9 +18,9 @@ const helveticaBoldCond = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'mariana. | Moda lenta hecha en pequeños lotes',
-  description: 'Descubre nuestra nueva colección limitada. Moda lenta y sostenible hecha en pequeños lotes.',
-  keywords: ['moda lenta', 'slow fashion', 'colección limitada', 'zapatos artesanales', 'tacones'],
+  title: 'APX Supply',
+  description: 'Equipamiento Premium Automotor. Alfombras premium a medida para concesionarios.',
+  keywords: ['alfombras automotor', 'equipamiento premium', 'concesionarios', 'alfombras a medida'],
 }
 
 export default function RootLayout({
