@@ -4,14 +4,14 @@ import Image from 'next/image'
 export default function Header() {
   return (
     <header
-      style={{ position: 'fixed', top: 0, left: 0, zIndex: 9999, padding: '20px 40px' }}
+      style={{ position: 'absolute', top: 0, left: 0, zIndex: 50, padding: '20px 40px' }}
     >
       <Link href="/">
         <Image
           src="/images/logo.svg"
           alt="APX"
-          width={280}
-          height={118}
+          width={350}
+          height={147}
           className="brightness-0 invert"
         />
       </Link>

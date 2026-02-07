@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative h-screen min-h-[600px] w-full flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/images/3.jpg"
+        src="/images/new/1.png"
         alt="APX - Equipamiento Premium Automotor"
         fill
         className="object-cover object-center"
@@ -16,20 +16,30 @@ export default function Hero() {
       <div className="absolute inset-0 bg-mariana-dark/40" />
 
       {/* Content - Centered */}
-      <div className="relative z-10 text-center max-w-[900px] px-10 animate-fade-in-up" style={{ fontFamily: 'Lato, sans-serif', fontWeight: 600 }}>
-        <h1 className="text-mariana-light text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide mb-6">
-          El producto que entregás también construye tu marca
+      <div className="relative z-10 text-center max-w-[1100px] px-10 animate-fade-in-up">
+        <h1 className="font-helvetica-bold-cond text-mariana-light text-3xl md:text-5xl lg:text-6xl leading-tight tracking-wide mb-6 uppercase">
+          El producto que entregás<br />
+          también construye tu marca
         </h1>
-        <p className="text-mariana-light text-base md:text-lg leading-relaxed max-w-[700px] mx-auto mb-8">
-          Desarrollamos alfombras premium a medida de cada modelo, para que tu concesionario ofrezca calidad, durabilidad y una experiencia a la altura de su nombre.
+        <p
+          className="text-mariana-light text-lg md:text-xl leading-relaxed max-w-[800px] mx-auto mb-8"
+          style={{ fontFamily: "'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif" }}
+        >
+          <span style={{ fontWeight: 400 }}>Desarrollamos </span>
+          <span style={{ fontWeight: 700 }}>alfombras premium a medida de cada modelo,</span>
+          <span style={{ fontWeight: 400 }}> para que tu concesionario ofrezca </span>
+          <span style={{ fontWeight: 700 }}>calidad, durabilidad</span>
+          <span style={{ fontWeight: 400 }}> y una </span>
+          <span style={{ fontWeight: 700 }}>experiencia a la altura</span>
+          <span style={{ fontWeight: 400 }}> de su nombre.</span>
         </p>
         <a
-          href="https://wa.me/541154099073?text=Solicito%20m%C3%A1s%20informaci%C3%B3n..."
+          href="https://wa.me/5491150975248?text=Hola!%20Me%20interesa%20sobre%20saber%20sus%20productos"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-mariana-dark text-mariana-light text-base md:text-lg px-8 py-4 rounded-full hover:bg-mariana-charcoal transition-colors"
+          className="inline-block font-helvetica-bold-cond bg-mariana-light text-mariana-dark text-xl md:text-2xl px-10 py-3 rounded-lg hover:bg-white transition-colors uppercase tracking-wide"
         >
-          Solicitar información
+          Solicitar info
         </a>
       </div>
     </section>

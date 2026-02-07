@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
 const cormorant = Cormorant_Garamond({
@@ -7,6 +8,12 @@ const cormorant = Cormorant_Garamond({
   weight: ['300', '400', '500', '600', '700'],
   style: ['normal', 'italic'],
   variable: '--font-cormorant',
+  display: 'swap',
+})
+
+const helveticaBoldCond = localFont({
+  src: '../public/fonts/new/HelveticaNeue-BoldCond.otf',
+  variable: '--font-helvetica-bold-cond',
   display: 'swap',
 })
 
@@ -22,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className={`${cormorant.variable} m-0 p-0`}>
+    <html lang="es" className={`${cormorant.variable} ${helveticaBoldCond.variable} m-0 p-0`}>
       <body className="font-cormorant text-mariana-light text-lg antialiased bg-mariana-dark m-0 p-0 w-full min-w-full">
         {children}
       </body>

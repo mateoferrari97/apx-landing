@@ -18,6 +18,8 @@ const config: Config = {
       fontFamily: {
         cormorant: ['var(--font-cormorant)', 'Georgia', 'serif'],
         lato: ['Lato', 'sans-serif'],
+        'helvetica-bold-cond': ['var(--font-helvetica-bold-cond)', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
+        'helvetica-neue': ['HelveticaNeue', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
       },
       fontSize: {
         'h1': 'clamp(36px, 5vw, 56px)',

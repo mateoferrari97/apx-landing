@@ -4,6 +4,7 @@ import AboutSection from '@/components/AboutSection'
 import ImageStrip from '@/components/ImageStrip'
 import Clients from '@/components/Clients'
 import Contact from '@/components/Contact'
+import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ImageStrip />
       <Clients />
       <Contact />
+      <Footer />
     </main>
   )
 }

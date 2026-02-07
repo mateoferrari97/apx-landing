@@ -35,6 +35,32 @@
   font-display: swap;
 }
 
+/* Helvetica Neue Bold Condensed */
+@font-face {
+  font-family: 'HelveticaNeue-BoldCond';
+  src: url('/fonts/new/HelveticaNeue-BoldCond.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Helvetica Neue */
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('/fonts/new/HelveticaNeue.ttc');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('/fonts/new/HelveticaNeue-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
