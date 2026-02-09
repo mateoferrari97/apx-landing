@@ -3,9 +3,9 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <footer className="bg-mariana-dark py-16 px-10 md:px-20">
-      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
+      <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
         {/* Contact Info */}
-        <div>
+        <div className="text-center md:text-left">
           <h3
             className="text-mariana-light text-3xl md:text-4xl uppercase tracking-wide mb-6"
             style={{ fontFamily: "'HelveticaNeue-BoldCond', 'Helvetica Neue', Helvetica, sans-serif" }}
@@ -16,7 +16,7 @@ export default function Footer() {
             className="text-mariana-light/80 text-sm md:text-base space-y-2"
             style={{ fontFamily: "'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif", fontWeight: 400 }}
           >
-            <p className="flex items-center gap-3">
+            <p className="flex items-center justify-center md:justify-start gap-3">
               <Image
                 src="/images/Iconos footer/Teléfono.svg"
                 alt="Phone"
@@ -26,7 +26,7 @@ export default function Footer() {
               />
               +54 9 11-3148-9751
             </p>
-            <p className="flex items-center gap-3">
+            <p className="flex items-center justify-center md:justify-start gap-3">
               <Image
                 src="/images/Iconos footer/Mail.svg"
                 alt="Email"
@@ -36,7 +36,7 @@ export default function Footer() {
               />
               info@apxsupply.com.ar
             </p>
-            <p className="flex items-center gap-3">
+            <p className="flex items-center justify-center md:justify-start gap-3">
               <Image
                 src="/images/Iconos footer/Ubic.svg"
                 alt="Location"
@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
 
         {/* Logo */}
-        <div className="w-56 md:w-80">
+        <div className="w-56 md:w-80 mx-auto md:mx-0">
           <Image
             src="/images/logo-white.svg"
             alt="APX - Equipamiento Premium Automotor"

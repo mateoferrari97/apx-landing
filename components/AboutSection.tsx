@@ -11,7 +11,7 @@ export default function AboutSection() {
         </h2>
 
         {/* Three Columns with Dividers */}
-        <div className="flex flex-col md:flex-row justify-center items-start md:items-center text-center">
+        <div className="flex flex-col md:flex-row justify-center items-center text-center">
           {/* Column 1 */}
           <div className="flex-1 py-4 md:py-0 px-6">
             <p className="text-mariana-light text-xl md:text-2xl" style={{ fontFamily: "'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif" }}>
@@ -21,7 +21,7 @@ export default function AboutSection() {
           </div>
 
           {/* Divider */}
-          <div className="hidden md:block w-px h-16 bg-mariana-light/50"></div>
+          <div className="w-24 h-px md:w-px md:h-16 bg-mariana-light/50 my-2 md:my-0"></div>
 
           {/* Column 2 */}
           <div className="flex-1 py-4 md:py-0 px-6">
@@ -32,7 +32,7 @@ export default function AboutSection() {
           </div>
 
           {/* Divider */}
-          <div className="hidden md:block w-px h-16 bg-mariana-light/50"></div>
+          <div className="w-24 h-px md:w-px md:h-16 bg-mariana-light/50 my-2 md:my-0"></div>
 
           {/* Column 3 */}
           <div className="flex-1 py-4 md:py-0 px-6">

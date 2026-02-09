@@ -1,19 +1,37 @@
 import Image from 'next/image'
 
 export default function Clients() {
-  const firstRow = [
+  const allClients = [
     { name: 'AutoPremier', logo: '/images/Conces/Logo AutoPremier.svg' },
     { name: 'Klasse', logo: '/images/Conces/Logo autos - Klasse.svg' },
     { name: 'Besten', logo: '/images/Conces/Logo Besten.svg' },
     { name: 'Colcar', logo: '/images/Conces/Logo Colcar ok.svg' },
     { name: 'Lonco-Hue', logo: '/images/Conces/Logo Lonco-Hue.svg' },
-  ]
-
-  const secondRow = [
     { name: 'Diesel San Miguel', logo: '/images/Conces/Logo Diesel San Miguel - OK.svg' },
     { name: 'LaMerced', logo: '/images/Conces/Logo LaMerced flor - OK.svg' },
     { name: 'Cigliutti Guerini', logo: '/images/Conces/Logo sprinter - Cigliutti Guerini.svg' },
   ]
+
+  // Desktop layout: 5 + 3
+  const desktopFirstRow = allClients.slice(0, 5)
+  const desktopSecondRow = allClients.slice(5, 8)
+
+  // Mobile layout: 3 + 3 + 2
+  const mobileFirstRow = allClients.slice(0, 3)
+  const mobileSecondRow = allClients.slice(3, 6)
+  const mobileThirdRow = allClients.slice(6, 8)
+
+  const LogoImage = ({ client }: { client: { name: string; logo: string } }) => (
+    <div className="h-8 md:h-12 relative">
+      <Image
+        src={client.logo}
+        alt={client.name}
+        width={150}
+        height={48}
+        className="h-full w-auto object-contain"
+      />
+    </div>
+  )
 
   return (
     <section className="py-16 px-10 md:px-20" style={{ backgroundColor: '#e0e0e0' }}>
@@ -24,33 +42,36 @@ export default function Clients() {
         >
           Nuestros clientes
         </h2>
-        <div className="flex flex-col gap-6 md:gap-8">
-          {/* First row */}
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 lg:gap-10">
-            {firstRow.map((client, index) => (
-              <div key={index} className="h-10 md:h-12 relative">
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  width={150}
-                  height={48}
-                  className="h-full w-auto object-contain"
-                />
-              </div>
+
+        {/* Mobile Layout: 3 + 3 + 2 */}
+        <div className="md:hidden flex flex-col gap-6">
+          <div className="flex justify-center items-center gap-4">
+            {mobileFirstRow.map((client, index) => (
+              <LogoImage key={index} client={client} />
             ))}
           </div>
-          {/* Second row */}
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 lg:gap-10">
-            {secondRow.map((client, index) => (
-              <div key={index} className="h-10 md:h-12 relative">
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  width={150}
-                  height={48}
-                  className="h-full w-auto object-contain"
-                />
-              </div>
+          <div className="flex justify-center items-center gap-4">
+            {mobileSecondRow.map((client, index) => (
+              <LogoImage key={index} client={client} />
+            ))}
+          </div>
+          <div className="flex justify-center items-center gap-4">
+            {mobileThirdRow.map((client, index) => (
+              <LogoImage key={index} client={client} />
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop Layout: 5 + 3 */}
+        <div className="hidden md:flex flex-col gap-8">
+          <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-10">
+            {desktopFirstRow.map((client, index) => (
+              <LogoImage key={index} client={client} />
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-10">
+            {desktopSecondRow.map((client, index) => (
+              <LogoImage key={index} client={client} />
             ))}
           </div>
         </div>
