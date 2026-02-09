@@ -17,7 +17,7 @@ export default function Hero() {
 
       {/* Content - Centered */}
       <div className="relative z-10 text-center max-w-[1100px] px-10 animate-fade-in-up">
-        <h1 className="font-helvetica-bold-cond text-mariana-light text-3xl md:text-5xl lg:text-6xl leading-tight tracking-wide mb-6 uppercase">
+        <h1 className="font-helvetica-bold-cond text-mariana-light text-2xl md:text-5xl lg:text-6xl leading-tight tracking-wide mb-6 uppercase">
           El producto que entregás<br />
           también construye tu marca
         </h1>

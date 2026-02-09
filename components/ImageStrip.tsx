@@ -12,6 +12,11 @@ export default function ImageStrip() {
   ]
 
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [showText, setShowText] = useState<number | null>(null)
+
+  const handleImageClick = (index: number) => {
+    setShowText(showText === index ? null : index)
+  }
 
   return (
     <section className="w-full overflow-hidden">
@@ -22,14 +27,22 @@ export default function ImageStrip() {
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {images.map((image, index) => (
-            <div key={index} className="relative aspect-[4/3] min-w-full">
+            <div
+              key={index}
+              className="relative aspect-[4/3] min-w-full cursor-pointer"
+              onClick={() => handleImageClick(index)}
+            >
               <Image
                 src={image.src}
                 alt={image.alt}
                 fill
                 className={`object-cover ${image.zoom ? 'scale-110' : ''}`}
               />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <div
+                className={`absolute inset-0 bg-black/40 flex items-center justify-center transition-opacity duration-300 ${
+                  showText === index ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
                 <span
                   className="text-mariana-light text-xl text-center px-4"
                   style={{ fontFamily: "'HelveticaNeue', 'Helvetica Neue', Helvetica, sans-serif", fontWeight: 700 }}
@@ -45,7 +58,10 @@ export default function ImageStrip() {
           {images.map((_, index) => (
             <button
               key={index}
-              onClick={() => setCurrentSlide(index)}
+              onClick={() => {
+                setCurrentSlide(index)
+                setShowText(null)
+              }}
               className={`w-2 h-2 rounded-full transition-colors ${
                 currentSlide === index ? 'bg-white' : 'bg-white/50'
               }`}
@@ -54,13 +70,19 @@ export default function ImageStrip() {
         </div>
         {/* Navigation arrows */}
         <button
-          onClick={() => setCurrentSlide(prev => (prev > 0 ? prev - 1 : images.length - 1))}
+          onClick={() => {
+            setCurrentSlide(prev => (prev > 0 ? prev - 1 : images.length - 1))
+            setShowText(null)
+          }}
           className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-black/30 rounded-full text-white"
         >
           ‹
         </button>
         <button
-          onClick={() => setCurrentSlide(prev => (prev < images.length - 1 ? prev + 1 : 0))}
+          onClick={() => {
+            setCurrentSlide(prev => (prev < images.length - 1 ? prev + 1 : 0))
+            setShowText(null)
+          }}
           className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 flex items-center justify-center bg-black/30 rounded-full text-white"
         >
           ›
